@@ -1,0 +1,16 @@
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.exe
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.deps.json
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.runtimeconfig.json
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.runtimeconfig.dev.json
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.dll
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\ref\sorting-practice.dll
+C:\Users\ucaku\RiderProjects\sorting-practice\bin\Debug\net5.0\sorting-practice.pdb
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.csproj.AssemblyReference.cache
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.AssemblyInfoInputs.cache
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.AssemblyInfo.cs
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.csproj.CoreCompileInputs.cache
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.dll
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\ref\sorting-practice.dll
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.pdb
+C:\Users\ucaku\RiderProjects\sorting-practice\obj\Debug\net5.0\sorting-practice.genruntimeconfig.cache
