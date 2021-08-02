@@ -6,13 +6,13 @@ namespace sorting_practice
     {
         public static string StringInput(string text)
         {
-            Console.WriteLine(text);
+            Console.Write(text + "\n > ");
             return Console.ReadLine();
         }
 
         public static int IntInput(string text)
         {
-            Console.WriteLine(text);
+            Console.Write(text + "\n > ");
             return Convert.ToInt32(Console.ReadLine());
         }
     }
