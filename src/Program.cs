@@ -15,7 +15,8 @@ namespace sorting_practice
 
                 arr = ArrayInitializer(sampleSize);
 
-                sortAlgorithm = Utility.IntInput("Please enter which sorting algorithm you would like to use.\n1. Bubble Sort");
+                sortAlgorithm = Utility.IntInput("Please enter which sorting algorithm you would like to use." +
+                                                 "\n1. Bubble Sort | 2. Insertion Sort");
 
                 switch (sortAlgorithm)
                 {
@@ -26,8 +27,17 @@ namespace sorting_practice
                         }
                         
                         Console.WriteLine();
-                        
                         break;
+                    
+                    case 2:
+                        foreach (int ele in InsertionSort(arr))
+                        {
+                            Console.Write(ele + ", ");
+                        }
+                        
+                        Console.WriteLine();
+                        break;
+                    
                     default:
                         Console.WriteLine("Please enter a valid input.");
                         break;
@@ -54,6 +64,27 @@ namespace sorting_practice
             
             return arr;
         }
+
+        static int[] InsertionSort(int[] arr)
+        {
+            int temp;
+
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                int j = i + 1;
+
+                while (j > 0 && arr[j] < arr[j - 1])
+                {
+                    temp = arr[j - 1];
+                    arr[j - 1] = arr[j];
+                    arr[j] = temp;
+                    j--;
+                }
+            }
+
+            return arr;
+        }
+        
         static int[] ArrayInitializer(int size)
         {
             Random rand = new Random();
