@@ -16,7 +16,7 @@ namespace sorting_practice
                 arr = ArrayInitializer(sampleSize);
 
                 sortAlgorithm = Utility.IntInput("Please enter which sorting algorithm you would like to use." +
-                                                 "\n1. Bubble Sort | 2. Insertion Sort");
+                                                 "\n1. Bubble Sort | 2. Insertion Sort | 3. Selection Sort");
 
                 switch (sortAlgorithm)
                 {
@@ -31,6 +31,15 @@ namespace sorting_practice
                     
                     case 2:
                         foreach (int ele in InsertionSort(arr))
+                        {
+                            Console.Write(ele + ", ");
+                        }
+                        
+                        Console.WriteLine();
+                        break;
+                    
+                    case 3:
+                        foreach (int ele in SelectionSort(arr))
                         {
                             Console.Write(ele + ", ");
                         }
@@ -82,6 +91,28 @@ namespace sorting_practice
                 }
             }
 
+            return arr;
+        }
+
+        static int[] SelectionSort(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int tempIndex = 0;
+                int tempValue = Int32.MaxValue;
+                
+                for (int j = i; j < arr.Length; j++)
+                {
+                    if (arr[j] < tempValue)
+                    {
+                        tempValue = arr[j];
+                        tempIndex = j;
+                    }
+                }
+                arr[tempIndex] = arr[i];
+                arr[i] = tempValue;
+
+            }
             return arr;
         }
         
