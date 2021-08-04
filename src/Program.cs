@@ -16,35 +16,29 @@ namespace sorting_practice
                 arr = ArrayInitializer(sampleSize);
 
                 sortAlgorithm = Utility.IntInput("Please enter which sorting algorithm you would like to use." +
-                                                 "\n1. Bubble Sort | 2. Insertion Sort | 3. Selection Sort");
+                                                 "\n1. Bubble Sort | 2. Insertion Sort | 3. Selection Sort | 4. Quick Sort");
 
                 switch (sortAlgorithm)
                 {
                     case 1:
-                        foreach (int ele in BubbleSort(arr))
-                        {
-                            Console.Write(ele + ", ");
-                        }
+                        ArrayPrint(BubbleSort(arr));
                         
-                        Console.WriteLine();
                         break;
                     
                     case 2:
-                        foreach (int ele in InsertionSort(arr))
-                        {
-                            Console.Write(ele + ", ");
-                        }
+                        ArrayPrint(InsertionSort(arr));
                         
-                        Console.WriteLine();
                         break;
                     
                     case 3:
-                        foreach (int ele in SelectionSort(arr))
-                        {
-                            Console.Write(ele + ", ");
-                        }
+                        ArrayPrint(SelectionSort(arr));
                         
-                        Console.WriteLine();
+                        break;
+                    
+                    case 4:
+                        QuickSort(arr, 0, arr.Length - 1);
+                        ArrayPrint(arr);
+                        
                         break;
                     
                     default:
@@ -115,6 +109,41 @@ namespace sorting_practice
             }
             return arr;
         }
+
+        static void QuickSort(int[] arr, int min, int max)
+        {
+            if (min < max)
+            {
+                int pivot = QuickSortPivot(arr, min, max);
+                
+                QuickSort(arr, min, pivot - 1);
+                QuickSort(arr, pivot + 1, max);
+            }
+        }
+
+        static int QuickSortPivot(int[] arr, int min, int max)
+        {
+            int pivot = arr[max];
+            int temp;
+            int i = min - 1;
+
+            for (int j = min; j < max; j++)
+            {
+                if (arr[j] < pivot)
+                {
+                    i++;
+                    temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+            
+            temp = arr[i + 1];
+            arr[i + 1] = arr[max];
+            arr[max] = temp;
+
+            return i + 1;
+        }
         
         static int[] ArrayInitializer(int size)
         {
@@ -127,6 +156,17 @@ namespace sorting_practice
             }
 
             return arr;
+        }
+
+        static void ArrayPrint(int[] arr)
+        {
+            string str = "";
+            foreach (int ele in arr)
+            {
+                str += ele + ", ";
+            }
+            
+            Console.WriteLine(str.Remove(str.Length - 2));
         }
     }
 }
